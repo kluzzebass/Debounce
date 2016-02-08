@@ -35,12 +35,11 @@ void Debouncer::update(bool st)
 
 	if (st != lastState)
 	{
-		lastBounce = millis();
+		lastBounce = micros();
 	}
 
-	// This might be rewritten to use microseconds instead of milliseconds
-	// to further reduce latency.
-	if ((millis() - lastBounce) > delay)
+	// Check if the pin has been stable long enough
+	if ((micros() - lastBounce) > delay)
 	{
 		if (state != st)
 	 	{

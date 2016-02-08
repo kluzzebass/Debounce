@@ -41,7 +41,7 @@ private:
 
 public:
 
-	// Contact debounce delay in milliseconds.
+	// Contact debounce delay in microseconds.
 	int delay;
 	
 	// Debounced state
